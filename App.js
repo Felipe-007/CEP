@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+/**
+ * useState
+ */
+import React, { useState } from "react";
+import { View, Text } from "react-native";
+import { styles } from "./styles";
+import api from "./src/services/api";
 
-export default function App() {
-  return (
+export default function App(){
+
+  const [nome, setNome] = useState('Felipe Lopes')
+
+  return(
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>{ nome }</Text>
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
